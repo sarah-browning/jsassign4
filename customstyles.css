@@ -1,0 +1,44 @@
+/* Super Simple Slider Images */
+.slider img {
+    
+    width: 375px;
+    height: 375px;
+}
+
+.just_text {
+    display: inline-block;
+    background-color: green;
+    color: ivory;
+    text-align: center;
+    padding: 172px 0;
+    font-size: 26px;
+    width: 375px;
+    height: 375px;
+}
+
+body {
+    background: rgb(255, 255, 255)  center / 80% repeat-y;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1920px;
+    min-width: 320px;
+    width: 75%;
+  }
+
+.jcarousel {
+    position: relative;
+    overflow: hidden;
+    width: 98%;
+}
+
+.jcarousel ul {
+    width: 10000em;
+    position: relative;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.jcarousel li {
+    float: left;
+}
