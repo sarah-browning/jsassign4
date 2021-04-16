@@ -10,44 +10,21 @@
         <title>Javascript Plug-ins</title>
 
         <!-- Add JQuery Library -->
-        <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>-->                                     <!-- JQuery 3.x Library -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>                                            <!-- JQuery 2.x Library -->
-        <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>-->                                    <!-- JQuery 1.x Library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 
-                                                                                                                                            <!-- Dropzone Start/End -->
-        <script src="dropzone-5.7.0/dist/dropzone.js"></script>
-
-                                                                                                                                            <!--Super Simple Slider Start | Works with 2.x library above -->
-        <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>-->
-        <script src="sss/sss.min.js"></script>
-        <link rel="stylesheet" href="sss/sss.css" type="text/css" media="screen" />
-        <script>jQuery(function($) {$('.slider').sss({slideShow : false});});</script>
-                                                                                                                                            <!-- Super Simple Slider End -->
-        
-                                                                                                                                            <!-- TinyMCE WYSIWYG Editor Start -->
-        <script src="https://cdn.tiny.cloud/1/t4z952bsu6sgo8zl89tsja5f460eljvfptv2fv9hep01kbke/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
-        <script>tinymce.init({selector: '#mytextarea'});</script>
-                                                                                                                                            <!-- TinyMCE WYSIWYG Editor End -->
-
-                                                                                                                                            <!-- Responsive Menu Start | Works with 2.x library above - didn't test 3.x -->
-        <!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>-->
+        <!-- Responsive Menu Files -->
         <link href="menus.css" rel="stylesheet" type="text/css" media="screen" />
         <link href="menus2.css" rel="stylesheet" type="text/css" media="screen" style="display: none !important;" />
-        <script>    
-            // DOM ready
+        <script type="text/javascript">
             $(function() {
-        
-                // Create the dropdown base
                 $("<select />").appendTo("nav");
-                
-                // Create default option "Go to..."
+
                 $("<option />", {
                     "selected": "selected",
                     "value"   : "",
                     "text"    : "Go to..."
                 }).appendTo("nav select");
-        
-                // Populate dropdown with menu items
+
                 $("nav a").each(function() {
                     var el = $(this);
                     $("<option />", {
@@ -56,49 +33,16 @@
                     }).appendTo("nav select");
                 });
         
-                // To make dropdown actually work
-                // To make more unobtrusive: http://css-tricks.com/4064-unobtrusive-page-changer/
                 $("nav select").change(function() {
                     window.location = $(this).find("option:selected").val();
                 });
             });
         </script>
-                                                                                                                                            <!-- Responsive Menu End -->
-                                                                                                                                            <!-- Pop-Up Gallery Start -->
-        <!--<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>-->
 
-        <!-- Add mousewheel plugin (this is optional) -->
-        <script type="text/javascript" src="fancybox/lib/jquery.mousewheel.pack.js"></script>
+        <!-- Dropzone Files -->
+        <script src="dropzone-5.7.0/dist/dropzone.js"></script>
 
-        <!-- Add fancyBox -->
-        <link rel="stylesheet" href="fancybox/source/jquery.fancybox.css" type="text/css" media="screen" />
-        <script type="text/javascript" src="fancybox/source/jquery.fancybox.pack.js"></script>
-
-        <!-- Optionally add helpers - button, thumbnail and/or media -->
-        <link rel="stylesheet" href="fancybox/source/helpers/jquery.fancybox-buttons.css" type="text/css" media="screen" />
-        <script type="text/javascript" src="fancybox/source/helpers/jquery.fancybox-buttons.css"></script>
-        <script type="text/javascript" src="fancybox/source/helpers/jquery.fancybox-media.js"></script>
-
-        <link rel="stylesheet" href="fancybox/source/helpers/jquery.fancybox-thumbs.css" type="text/css" media="screen" />
-        <script type="text/javascript" src="fancybox/source/helpers/jquery.fancybox-thumbs.js"></script>
-
-        <script type="text/javascript">
-            $(document).ready(function() {
-                $(".fancybox").fancybox();
-            });
-        </script>
-                                                                                                                                            <!-- Pop-Up Gallery End -->
-                                                                                                                                            <!-- Sortable Tables Start -->
-        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.24/datatables.css" />
-        <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.24/datatables.js"></script>
-        <script type="text/javascript">
-            $(document).ready( function () {
-                $('#itemTable').DataTable();
-            } );
-        </script>
-                                                                                                                                           <!-- Sortable Tables End -->
-                                                                                                                                            <!-- JCarousel Start-->
-        <!-- <link rel="stylesheet" type="text/css" href="jcarousel/style.css" /> -->
+        <!-- JCarousel Files -->
         <link rel="stylesheet" href="jcarousel/jcarousel.vertical.css" />
         <script type="text/javascript" src="jcarousel/jquery.jcarousel.js"></script>
         <script type="text/javascript" src="jcarousel/jquery.jcarousel.min.js"></script>
@@ -123,10 +67,8 @@
                 });
             });
         </script>
-        
-                                                                                                                                            <!-- JCarousel End-->
-                                                                                                                                            <!-- Datepicker Start -->
-        <!-- <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script> -->
+    
+        <!-- Datepicker File -->
         <link rel="stylesheet" type="text/css" href="datepicker/css/jquery.datepick.css"> 
         <script type="text/javascript" src="datepicker/js/jquery.plugin.js"></script> 
         <script type="text/javascript" src="datepicker/js/jquery.datepick.js"></script>
@@ -135,7 +77,50 @@
                 $('#datepicker').datepick();
                 });
         </script>
-                                                                                                                                            <!-- Datepicker End -->
+
+        <!-- Pop-Up Gallery Files -->
+        <script type="text/javascript" src="fancybox/lib/jquery.mousewheel.pack.js"></script>
+        <link rel="stylesheet" href="fancybox/source/jquery.fancybox.css" type="text/css" media="screen" />
+        <script type="text/javascript" src="fancybox/source/jquery.fancybox.pack.js"></script>
+        <link rel="stylesheet" href="fancybox/source/helpers/jquery.fancybox-buttons.css" type="text/css" media="screen" />
+        <script type="text/javascript" src="fancybox/source/helpers/jquery.fancybox-buttons.css"></script>
+        <script type="text/javascript" src="fancybox/source/helpers/jquery.fancybox-media.js"></script>
+        <link rel="stylesheet" href="fancybox/source/helpers/jquery.fancybox-thumbs.css" type="text/css" media="screen" />
+        <script type="text/javascript" src="fancybox/source/helpers/jquery.fancybox-thumbs.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $(".fancybox").fancybox();
+            });
+        </script>
+
+        <!--Super Simple Slider Files -->
+        <script src="sss/sss.min.js"></script>
+        <link rel="stylesheet" href="sss/sss.css" type="text/css" media="screen" />
+        <script>
+        jQuery(function(
+            $) {$('.slider').sss({
+                slideShow : false
+                });
+            });
+        </script>
+        
+        <!-- Sortable Tables Files -->
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.24/datatables.css" />
+        <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.24/datatables.js"></script>
+        <script type="text/javascript">
+            $(document).ready( function () {
+                $('#itemTable').DataTable();
+            } );
+        </script>
+        
+        <!-- TinyMCE WYSIWYG Editor Files -->
+        <script src="https://cdn.tiny.cloud/1/t4z952bsu6sgo8zl89tsja5f460eljvfptv2fv9hep01kbke/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+        <script>
+            tinymce.init({
+                selector: '#mytextarea'
+            });
+        </script>
+        
         <!-- Custom Styling Changes -->
         <link href="customstyles.css" rel="stylesheet" type="text/css" media="screen" />
     </head>
@@ -155,6 +140,15 @@
                     <li><a href="#support">Support</a></li>
                 </ul>
             </nav>
+        </div>
+        <br />
+
+        <!-- Multi-File Upload -->
+        <div class="dropzone-wrapper">
+            <h1>Multi-File Upload</h1>
+            <form action="/file-upload class="dropzone" id="my-awesome-dropzone">
+                <input name="file" type="file" multiple />
+            </form>
         </div>
         <br />
 
@@ -183,14 +177,7 @@
         </div>
         <br />
 
-        <!-- Multi-File Upload -->
-        <div class="dropzone-wrapper">
-            <h1>Multi-File Upload</h1>
-            <form action="/file-upload class="dropzone" id="my-awesome-dropzone">
-                <input name="file" type="file" multiple />
-            </form>
-        </div>
-        <br />
+        
 
         <!-- Date Picker -->
         <div class="datepicker-wrapper">
