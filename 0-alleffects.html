@@ -2,25 +2,35 @@
 <html lang="en">
 
     <head>
+
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
         <title>Javascript Plug-ins</title>
-        <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>-->                     <!-- JQuery 3.x Library -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>                            <!-- JQuery 2.x Library -->
-        <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>-->                    <!-- JQuery 1.x Library -->
 
-        <script src="dropzone-5.7.0/dist/dropzone.js"></script>                                                             <!-- Dropzone Start/End -->
+        <!-- Add JQuery Library -->
+        <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>-->                                     <!-- JQuery 3.x Library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>                                            <!-- JQuery 2.x Library -->
+        <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>-->                                    <!-- JQuery 1.x Library -->
 
-        <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>-->                     <!--Super Simple Slider Start | Works with 2.x library above -->
+                                                                                                                                            <!-- Dropzone Start/End -->
+        <script src="dropzone-5.7.0/dist/dropzone.js"></script>
+
+                                                                                                                                            <!--Super Simple Slider Start | Works with 2.x library above -->
+        <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>-->
         <script src="sss/sss.min.js"></script>
         <link rel="stylesheet" href="sss/sss.css" type="text/css" media="screen" />
-        <script>jQuery(function($) {$('.slider').sss({slideShow : false});});</script>                                                         <!-- Super Simple Slider End -->
+        <script>jQuery(function($) {$('.slider').sss({slideShow : false});});</script>
+                                                                                                                                            <!-- Super Simple Slider End -->
         
-        <script src="https://cdn.tiny.cloud/1/t4z952bsu6sgo8zl89tsja5f460eljvfptv2fv9hep01kbke/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>      <!-- TinyMCE WYSIWYG Editor Start -->
-        <script>tinymce.init({selector: '#mytextarea'});</script>                                                           <!-- TinyMCE WYSIWYG Editor End -->
+                                                                                                                                            <!-- TinyMCE WYSIWYG Editor Start -->
+        <script src="https://cdn.tiny.cloud/1/t4z952bsu6sgo8zl89tsja5f460eljvfptv2fv9hep01kbke/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+        <script>tinymce.init({selector: '#mytextarea'});</script>
+                                                                                                                                            <!-- TinyMCE WYSIWYG Editor End -->
 
-        <!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>-->                           <!-- Responsive Menu Start | Works with 2.x library above - didn't test 3.x -->
+                                                                                                                                            <!-- Responsive Menu Start | Works with 2.x library above - didn't test 3.x -->
+        <!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>-->
         <link href="menus.css" rel="stylesheet" type="text/css" media="screen" />
         <link href="menus2.css" rel="stylesheet" type="text/css" media="screen" style="display: none !important;" />
         <script>    
@@ -52,10 +62,10 @@
                     window.location = $(this).find("option:selected").val();
                 });
             });
-        </script>                                                                                                                           <!-- Responsive Menu End -->
-
-        <!-- Add jQuery library -->
-        <!--<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>-->                                   <!-- Pop-Up Gallery Start -->
+        </script>
+                                                                                                                                            <!-- Responsive Menu End -->
+                                                                                                                                            <!-- Pop-Up Gallery Start -->
+        <!--<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>-->
 
         <!-- Add mousewheel plugin (this is optional) -->
         <script type="text/javascript" src="fancybox/lib/jquery.mousewheel.pack.js"></script>
@@ -76,18 +86,56 @@
             $(document).ready(function() {
                 $(".fancybox").fancybox();
             });
-        </script>                                                                                                                           <!-- Pop-Up Gallery End -->
-
-        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.24/datatables.css" />                          <!-- Sortable Tables Start -->
+        </script>
+                                                                                                                                            <!-- Pop-Up Gallery End -->
+                                                                                                                                            <!-- Sortable Tables Start -->
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.24/datatables.css" />
         <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.24/datatables.js"></script>
         <script type="text/javascript">
             $(document).ready( function () {
                 $('#itemTable').DataTable();
             } );
         </script>
-        <!-- Sortable Tables End -->
+                                                                                                                                           <!-- Sortable Tables End -->
+                                                                                                                                            <!-- JCarousel Start-->
+        <!-- <link rel="stylesheet" type="text/css" href="jcarousel/style.css" /> -->
+        <link rel="stylesheet" href="jcarousel/jcarousel.vertical.css" />
+        <script type="text/javascript" src="jcarousel/jquery.jcarousel.js"></script>
+        <script type="text/javascript" src="jcarousel/jquery.jcarousel.min.js"></script>
+        <script type="text/javascript">
+            $(function() {
+                $('.jcarousel').jcarousel({
+                    wrap: 'circular',
+                    center: true
+                })
+                .jcarouselAutoscroll({
+                    interval: 4000,
+                    target: '+=1',
+                    autostart: true
+                });
 
+                $('.jcarousel-prev').jcarouselControl({
+                    target: '-=1'
+                });
 
+                $('.jcarousel-next').jcarouselControl({
+                    target: '+=1'
+                });
+            });
+        </script>
+        
+                                                                                                                                            <!-- JCarousel End-->
+                                                                                                                                            <!-- Datepicker Start -->
+        <!-- <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script> -->
+        <link rel="stylesheet" type="text/css" href="datepicker/css/jquery.datepick.css"> 
+        <script type="text/javascript" src="datepicker/js/jquery.plugin.js"></script> 
+        <script type="text/javascript" src="datepicker/js/jquery.datepick.js"></script>
+        <script type="text/javascript">
+            $(function() {
+                $('#datepicker').datepick();
+                });
+        </script>
+                                                                                                                                            <!-- Datepicker End -->
         <!-- Custom Styling Changes -->
         <link href="customstyles.css" rel="stylesheet" type="text/css" media="screen" />
     </head>
@@ -95,9 +143,9 @@
     <body>
 
         <!-- Responsive Menu -->
-        <div id="responsivemenu-wrapper">
-            <h1>Responsive Menus</h1>
+        <div class="responsivemenu-wrapper">
             <nav>
+                <h1>Responsive Menus</h1>
                 <h2>This menu turns into a &lt;select> when window is less than 960px to conserve space.</h2>
                 <ul>
                     <li><a href="#" class="active">Home</a></li>
@@ -110,24 +158,33 @@
         </div>
         <br />
 
-        <!-- WYSIWYG Editor -->
-        <div id="tinymce-wrapper">
-            <h1>WYSIWYG Editor</h1>
-            <form method="post">
-                <textarea id="mytextarea" name="mytextarea">
-                    Hello, World!
-                </textarea>
-            </form>
-        </div>
+        <!-- Auto-Scrolling Carousel -->
+        <div class="wrapper">
+            <h1>Carousel with Auto-Scrolling</h1>
+            <div class="jcarousel-wrapper">
+                <div class="jcarousel">
+                    <ul>
+                        <li><img src="images/keyleth-md.jpg" width="1502" height="652" alt=""></li>
+                        <li><img src="images/vax-md.jpg" width="1502" height="652" alt=""></li>
+                        <li><img src="images/vex-md.jpg" width="1502" height="652" alt=""></li>
+                        <li><img src="images/percy-md.jpg" width="1502" height="652" alt=""></li>
+                        <li><img src="images/grog-md.jpg" width="1502" height="652" alt=""></li>
+                        <li><img src="images/pike-md.jpg" width="1502" height="652" alt=""></li>
+                        <li><img src="images/scanlan-md.jpg" width="1502" height="652" alt=""></li>
+                        <li><img src="images/taryon-md.jpg" width="1502" height="652" alt=""></li>
+                        <li><img src="images/gilmore-md.jpg" width="1502" height="652" alt=""></li>
+                    </ul>
+                </div>
 
-        <!-- Date Picker -->
-        <div id="datepicker-wrapper">
-            <h1>Keith Wood Date Picker</h1>
-            -- code --
+                <p class="photo-credits">
+                    All Critical Role artwork <a href="https://www.jessketchin.com/">&copy; Jessica Nguyen</a>.
+                </p>
+            </div>
         </div>
+        <br />
 
         <!-- Multi-File Upload -->
-        <div id="dropzone-wrapper">
+        <div class="dropzone-wrapper">
             <h1>Multi-File Upload</h1>
             <form action="/file-upload class="dropzone" id="my-awesome-dropzone">
                 <input name="file" type="file" multiple />
@@ -135,35 +192,16 @@
         </div>
         <br />
 
-        <!-- Auto-Scrolling Carousel -->
-        <div id="jcarousel-wrapper">
-            <h1>Carousel with Auto-Scrolling</h1>
-            <div class="jcarousel">
-                <ul>
-                    <li><img src="images/keyleth-md.jpg" width="1502" height="652" alt=""></li>
-                    <li><img src="images/vax-md.jpg" width="1502" height="652" alt=""></li>
-                    <li><img src="images/vex-md.jpg" width="1502" height="652" alt=""></li>
-                    <li><img src="images/percy-md.jpg" width="1502" height="652" alt=""></li>
-                    <li><img src="images/grog-md.jpg" width="1502" height="652" alt=""></li>
-                    <li><img src="images/pike-md.jpg" width="1502" height="652" alt=""></li>
-                    <li><img src="images/scanlan-md.jpg" width="1502" height="652" alt=""></li>
-                    <li><img src="images/taryon-md.jpg" width="1502" height="652" alt=""></li>
-                    <li><img src="images/gilmore-md.jpg" width="1502" height="652" alt=""></li>
-                </ul>
-            </div>
-
-            <p class="photo-credits">
-                All Critical Role artwork <a href="https://www.jessketchin.com/">&copy; Jessica Nguyen</a>.
-            </p>
-            
-            <div class="jcarousel-pagination">
-                
-            </div>
+        <!-- Date Picker -->
+        <div class="datepicker-wrapper">
+            <h1>Keith Wood Date Picker</h1>
+            <form>
+                <input type="text" id="datepicker"></p>
+            </form>
         </div>
-        <br />
 
         <!-- Pop-Up Gallery -->
-        <div id="fancybox-wrapper">
+        <div class="fancybox-wrapper">
             <h1>Pop-Up Gallery</h1>
             <a class="fancybox" rel="group" href="images/jester-big.jpg"><img src="images/jester-sm.jpg" alt="" /></a>
             <a class="fancybox" rel="group" href="images/fjord-big.jpg"><img src="images/fjord-sm.jpg" alt="" /></a>
@@ -181,7 +219,7 @@
         <br />
 
         <!-- Slider -->
-        <div id="slider-wrapper">
+        <div class="slider-wrapper">
             <h1>Super Simple Slider</h1>
             <div class="slider">
                 <img src="images/flower1.jpg" />
@@ -196,7 +234,7 @@
         <br />
 
         <!-- Sortable Tables -->
-        <div id="datatables-wrapper">
+        <div class="datatables-wrapper">
             <h1>Sortable Tables</h1>
             <table id="itemTable">
                 <thead>
@@ -296,6 +334,16 @@
             </table>
         </div>
         <br />
+
+        <!-- WYSIWYG Editor -->
+        <div class="tinymce-wrapper">
+            <h1>WYSIWYG Editor</h1>
+            <form method="post">
+                <textarea id="mytextarea" name="mytextarea">
+                    Hello, World!
+                </textarea>
+            </form>
+        </div>
 
     </body>
 
